@@ -1,0 +1,27 @@
+What to do next in implementation order
+
+Build it in this order:
+
+JSON schemas first
+rule-based preprocessor
+LLM atomic extractor
+deterministic transition builder
+unknown detector
+validator
+clarification generator
+evaluation set with 10–20 prompts
+
+That order reduces chaos a lot.
+
+Recommended algorithm flow
+Prompt
+→ preprocess
+→ split into clauses
+→ extract atomic facts
+→ normalize labels
+→ infer candidate states
+→ build transitions
+→ detect unknowns
+→ validate graph
+→ generate clarifications
+→ export final machine JSON
